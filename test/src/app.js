@@ -10,9 +10,6 @@ const db = require("./database/models");
 db.sequelize.sync();
 
 const { authRouter } = require('./router/auth.router');
-const { customerRouter } = require('./router/customer.router');
-const { heartbeatRouter } = require('./router/heartbeat.router');
-const { adminRouter } = require('./router/admin.router');
 
 const corsConfig = {
     origin: allowedOrigin,
@@ -31,9 +28,7 @@ app.use(cors(corsConfig));
 
 
 authRouter(app);
-adminRouter(app);
-heartbeatRouter(app)
-customerRouter(app)
+
 
 app.use(apiErrorHandler);// this line always last line.
 

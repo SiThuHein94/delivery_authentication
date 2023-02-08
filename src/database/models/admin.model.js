@@ -54,5 +54,9 @@ module.exports = (sequelize, Sequelize) => {
         };
     };
 
+    Admin.prototype.validPassword = function (password) {
+        return bcrypt.compare(password, this.password);
+    }
+
     return Admin;
 };

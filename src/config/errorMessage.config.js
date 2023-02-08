@@ -38,6 +38,15 @@ const ID_ALREADY_USED_ERROR = {
   message: "Id Already Exist!"
 };
 
+const ACCOUNT_HAS_LOCKED_ERROR = {
+  message: "Account has locked currently!"
+};
+
+const LOGIN_TIME_WARNING = {
+  message: "Account will be locked if password wrong again!"
+};
+
+
 
 module.exports = {
   INTERNAL_SERVER_ERROR,
@@ -50,5 +59,7 @@ module.exports = {
   ID_NOT_FOUND_ERROR,
   WRONG_PASSWORD_ERROR,
   ID_ALREADY_USED_ERROR,
-  PHONE_NUMBER_ALREADY_USED_ERROR
+  PHONE_NUMBER_ALREADY_USED_ERROR,
+  ACCOUNT_HAS_LOCKED_ERROR,
+  LOGIN_TIME_WARNING
 };
